@@ -104,7 +104,25 @@ public class Calculator
     protected static int calculateThreeTokens(String[] tokens)
             throws ArithmeticException, NumberFormatException, CalculatorException
     {
-        //TODO: complete this...
+        int a = Integer.parseInt(tokens[0]);
+    	int b = Integer.parseInt(tokens[2]);
+        String command = tokens[1];
+        int c; //number we are returning after a & b interaction
+        
+        if(!command.equalsIgnoreCase("+") && !command.equalsIgnoreCase("-") && !command.equalsIgnoreCase("/")) {
+        	throw new CalculatorException("Illegal Command");
+        }
+        else {
+        	if (command.equals("+")) {
+            	c = a + b;
+            }
+            else if (command.equals("-")) {
+            	c = a - b;
+            }
+            else {
+            	c = a / b;
+            }
+            retu
     }
 
     /**
