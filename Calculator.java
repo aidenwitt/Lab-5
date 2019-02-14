@@ -1,3 +1,5 @@
+import java.text.Format;
+
 /**
  * A class representing a simple calculator. The calculator takes in an input string and interprets it as a command.
  * The calculator evaluates the command and returns a result.
@@ -180,8 +182,25 @@ public class Calculator
      */
     public static String parseAndExecute(String input)
     {
-        // TODO: complete this...
         // Hint: you should try and call execute(). If execute encounters an error, it will throw an exception. This
         // method will catch those exceptions and respond accordingly.
+    	String[] tokens = input.split(" ");	
+    	try {
+    		if (execute(tokens) == Integer.MIN_VALUE) {
+    			return "quit";
+    		}
+    		else {
+			return String.format("The result is: %d", execute(tokens));
+    		}
+		} 
+    	catch (ArithmeticException a) {
+			return "Attempted to divide by 0. Please try again.";
+		} 
+    	catch (NumberFormatException b) {
+    		return "Input number cannot be parsed to an int. Please try again.";
+    	}
+    	catch (CalculatorException c) {
+    		return String.format("Calculator Exception, message is: %s", c.getMessage());
+		}
     }
 }
