@@ -71,7 +71,7 @@ public class CalculatorTest {
         }
         catch (CalculatorException e)
         {
-            // We expect the function to throw a NumberFormatException (from failure of Integer.parseInt)
+            // We expect the function to throw a CalculatorException
             // Success; Assert.fail will not be thrown and the code will complete the test, thus succeeding.
         }
         catch (Exception e)
@@ -141,7 +141,7 @@ public class CalculatorTest {
         }
         catch (NumberFormatException e)
         {
-            // We expect the function to throw a NumberFormatException (from failure of Integer.parseInt)
+            // We expect the function to throw a NumberFormatException
             // Success; Assert.fail will not be thrown and the code will complete the test, thus succeeding.
         }
         catch (Exception e)
@@ -157,7 +157,7 @@ public class CalculatorTest {
         }
         catch (NumberFormatException e)
         {
-            // We expect the function to throw a NumberFormatException (from failure of Integer.parseInt)
+            // We expect the function to throw a NumberFormatException
             // Success; Assert.fail will not be thrown and the code will complete the test, thus succeeding.
         }
         catch (Exception e)
@@ -178,7 +178,7 @@ public class CalculatorTest {
         }
         catch (CalculatorException e)
         {
-            // We expect the function to throw a NumberFormatException (from failure of Integer.parseInt)
+            // We expect the function to throw a CalculatorException
             // Success; Assert.fail will not be thrown and the code will complete the test, thus succeeding.
         }
         catch (Exception e)
@@ -248,7 +248,7 @@ public class CalculatorTest {
         }
         catch (CalculatorException e)
         {
-            // We expect the function to throw a CalculatorException.
+            // We expect the function to throw a CalculatorException
             // Check to make sure the CalculatorException has the correct message and type:
             Assert.assertEquals("Illegal Command", e.getMessage());
         }
@@ -271,7 +271,7 @@ public class CalculatorTest {
         }
         catch (CalculatorException e)
         {
-            // We expect the function to throw a NumberFormatException (from failure of Integer.parseInt)
+            // We expect the function to throw a CalculatorException
             // Success; Assert.fail will not be thrown and the code will complete the test, thus succeeding.
         }
         catch (Exception e)
@@ -287,7 +287,7 @@ public class CalculatorTest {
         }
         catch (CalculatorException e)
         {
-            // We expect the function to throw a NumberFormatException (from failure of Integer.parseInt)
+            // We expect the function to throw a CalculatorException
             // Success; Assert.fail will not be thrown and the code will complete the test, thus succeeding.
         }
         catch (Exception e)
